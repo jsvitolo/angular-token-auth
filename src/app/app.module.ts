@@ -10,6 +10,8 @@ import { MaterializeModule } from 'angular2-materialize'
 import { Angular2TokenService } from 'angular2-token';
 import { FormsModule } from '@angular/forms'
 
+import { AuthService } from './services/auth.service'
+
 import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
@@ -32,7 +34,7 @@ import { RegisterFormComponent } from './register-form/register-form.component'
     AppRoutingModule,
     MaterializeModule
   ],
-  providers: [ Angular2TokenService ],
+  providers: [ Angular2TokenService, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
